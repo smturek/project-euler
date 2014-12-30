@@ -5,3 +5,29 @@
 
 #By considering the terms in the Fibonacci sequence whose values do not exceed
 #four million, find the sum of the even-valued terms.
+
+def fibonacci
+  terms = [1,2]
+  i = 1
+
+  while terms[i] < 4000000 do
+    terms << terms[i] + terms[i - 1]
+    i += 1
+  end
+  terms
+end
+
+def sum_of_evens
+  result = 0
+  terms = fibonacci()
+
+  terms.each do |term|
+    if term.even?
+      result += term
+    end
+  end
+
+  result
+end
+
+puts sum_of_evens()
