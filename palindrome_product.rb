@@ -4,9 +4,11 @@
 #Find the largest palindrome made from the product of two 3-digit numbers.
 
 def palindrome
-  result = 0
+  result = 9009
 
-  result
+  if result.to_s == result.to_s.reverse
+    true
+  end
 end
 
 puts palindrome()
