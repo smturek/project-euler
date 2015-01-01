@@ -6,20 +6,33 @@
 
 def smallest_multiple
   results = []
-  values = (1..100).to_a
+  values = (1..300000000).to_a
 
   values.each do |value|
-    results << value * 20
+    if value % 20 == 0 &&
+      value % 19 == 0 &&
+      value % 18 == 0 &&
+      value % 17 == 0 &&
+      value % 16 == 0 &&
+      value % 15 == 0 &&
+      value % 14 == 0 &&
+      value % 13 == 0 &&
+      value % 12 == 0 &&
+      value % 11 == 0 &&
+      value % 10 == 0 &&
+      value % 9 == 0 &&
+      value % 8 == 0 &&
+      value % 7 == 0 &&
+      value % 6 == 0 &&
+      value % 5 == 0 &&
+      value % 4 == 0 &&
+      value % 3 == 0 &&
+      value % 2 == 0
+        results << value
+      end
+
   end
-
-  results.each do |result|
-    if result % 19 != 0
-      results.delete(result)
-    end
-  end
-
-
-  result
+  results
 end
 
 puts smallest_multiple()
